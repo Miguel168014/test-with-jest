@@ -1,0 +1,1 @@
+export { unNumero, unString, esVerdadero };
