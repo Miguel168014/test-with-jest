@@ -1,10 +1,18 @@
-import { contactos } from "./contactos";
+import { Contacto, contactos } from "./contactos";
 
-function findOneByEmail(email:string) {
-contactos.forEach(contacto => {
-    if (contacto.email === email){
-        return contacto
+function findOneByEmail(email: string): Contacto {
+  for (const contacto of contactos) {
+    if (contacto.email === email) {
+      return contacto;
     }
-});
-} 
-export{findOneByEmail} 
+  }
+  return {
+    id: 0,
+    first_name: "",
+    last_name: "",
+    email: "",
+    gender: "",
+    ip_address: "",
+  };
+}
+export { findOneByEmail };
